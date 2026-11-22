@@ -1,4 +1,4 @@
-# Raziel Across Nosgoth — R65
+# Raziel Across Nosgoth — R67
 
 A Windows mod bringing Defiance movement, ground and aerial combat animations, directional dodges, telekinesis, soul-draining finishers and charged Reaver abilities into **Soul Reaver 1 Remastered**. Play the Soul Reaver 1 campaign with your own save. This does not modify the Soul Reaver 2 campaign.
 
@@ -7,12 +7,14 @@ A Windows mod bringing Defiance movement, ground and aerial combat animations, d
 ## Download and install
 
 1. Install **Legacy of Kain: Soul Reaver 1 & 2 Remastered** and **Legacy of Kain: Defiance Remastered** on Windows 10/11 x64. Both games must work independently. The original non-remastered releases are not supported.
-2. Close both games and back up your saves. [Download the R65 installer ZIP](https://github.com/nPoTo/raziel-across-nosgoth/releases/download/R65/Raziel-R65-Installer.zip).
-3. Extract the ZIP, read the included README and run **Raziel R65 Setup.exe**. Choose the SR1 folder containing `SRX.exe` and `1/sr1.dll`, then the Defiance folder containing `defiance.exe` and `bigfile.x64.dat`. Follow **Next → Install → Finish**.
+2. Close both games and back up your saves. [Download the R67 installer ZIP](https://github.com/nPoTo/raziel-across-nosgoth/releases/download/R67/Raziel-R67-Installer.zip).
+3. Extract the ZIP, read the included README and run **Raziel R67 Setup.exe**. Choose the SR1 folder containing `SRX.exe` and `1/sr1.dll`, then the Defiance folder containing `defiance.exe` and `bigfile.x64.dat`. Follow **Next → Install → Finish**.
 4. Start Soul Reaver 1 normally from Steam, its original executable or your existing shortcut. **Defiance must remain installed, but does not need to run.** No companion save or separate launcher is needed.
 5. Load your save and press **F10**. First-time resource preparation can take about a minute or more; F10 can queue activation. The tray icon shows Loading, On or Off. Later F10 presses toggle the mod without preparing the resources again. **F7** opens the complete guide.
 
 Node is bundled; no Python, compiler or development tools are needed to play. The Windows helper uses .NET Framework. Game resources are read from the installed games into RAM; original game archives and saves are not distributed.
+
+**R67 changes:** Y / right click with a carried physical weapon now uses the original aim/throw/contextual-finisher input instead of Look. Reaver Y remains the lift/slam action. Native targeting decides whether a physical finisher is available. The final no-flight outcome still needs gameplay confirmation.
 
 ## Controls
 
@@ -63,7 +65,15 @@ Standard Reaver strikes deal **500 + 300 per acquired elemental form**. Spirit d
 
 ## Optional debug shortcuts
 
-**F6** grants the base Reaver. **F9** toggles the all-powers/Glyphs/portals/health/mana preset. Pressing F9 again restores the captured state in the same session, but saving the game can make changes persist. Back up saves before using these shortcuts. The original Debug menu opens with **F10 Off, then E + left click / B + X** and are not required for ordinary play.
+**F6** grants the base Reaver. **F9** toggles the all-powers/Glyphs/portals/health/mana preset. Pressing F9 again restores the captured state in the same session, but saving the game can make changes persist. Back up saves before using these shortcuts. The original Debug menu opens with **F10 Off, then E + left click / B + X**. These shortcuts are not required for ordinary play.
+
+## Optional experimental battle arena
+
+- **F11:** create two members of each of nine non-boss families around the current position (14 Material and 4 Spectral). Start on wide, flat, covered terrain in Material. Spectral creatures belong to the Spectral realm.
+- **Shift + F11:** remove the arena’s temporary opponents. F10 Off also clears the arena.
+- **Ctrl + F11:** smaller two-family diagnostic group. Clear an existing group before requesting another.
+
+This optional feature is experimental. All 18 native creation events have been observed, but persistence, visibility in both realms and combat for every family are not fully verified. Sunlight, unsuitable terrain and original enemy rules can affect the encounter. Arena creation may be refused if the native pool has insufficient spare capacity. It is not required for normal campaign play.
 
 ## Help and uninstall
 
@@ -75,12 +85,11 @@ See [README.txt](README.txt) for the complete installation and field guide, and 
 
 ## Source, licensing and credits
 
-The complete corresponding R65 mod source is supplied as [raziel-across-nosgoth-R65-source.zip](raziel-across-nosgoth-R65-source.zip), and is also embedded in the installer payload as `RazielR60/SOURCE.zip`. It contains the native compiler inputs/header closure, authored typed policy inputs, runtime JavaScript and C# bootstrap/installer/uninstaller sources. The versioned archive is the source distribution in this repository.
+The complete corresponding R67 mod source is supplied as [raziel-across-nosgoth-R67-source.zip](raziel-across-nosgoth-R67-source.zip), and is also embedded in the installer payload as `RazielR60/SOURCE.zip`. It contains the native compiler inputs/header closure, authored typed policy inputs, runtime JavaScript and C# bootstrap/installer/uninstaller sources. The versioned archive is the source distribution in this repository.
 
 The mod is **GPL-3.0-or-later**; see [LICENSE](LICENSE). Dependencies include MinHook (BSD-style), Ultimate ASI Loader (MIT) and Node.js with its dependency notices. Their licenses/attributions are included. Original game resources and trademarks belong to their respective owners. No game archives, saves, credentials or gameplay captures are included.
 
 Shortcut feedback: F6 and F9 require focused, ordinary grounded gameplay. Requests wait up to five seconds for a safe frame. F6 grants the native base-Reaver acquisition flags. F9 temporarily suspends mod hooks before changing powers and resumes the previous activation choice. The last result is shown at the top of F7 and in a tray notification. Changes may persist if the game saves.
 
 Original Debug menu: turn the mod Off with F10, release the buttons, then press E + left click on keyboard/mouse or B + X on controller. Use the same combination to close it, then F10 to resume. There is no added Pause → Debug row. The original menu includes Levels, Raziel, Goodies, Camera and AI/Script options. Debug changes can alter progress; back up your saves.
-
 

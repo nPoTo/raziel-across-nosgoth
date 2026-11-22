@@ -1,2 +1,2 @@
-3b16f48acae6666adc1c89782ace47a1435261e888759c0557ff5b25a3d991cc  Raziel-R65-Installer.zip
-966ab9cfbdd80df7f3665030c7373d7e349842a4c5815b08eccf4d0483c2a1e4  raziel-across-nosgoth-R65-source.zip
+e3c42912deb8f780852ec13e265ab86a0f69ad5f64a8a412595a1b808883ddbf  Raziel-R67-Installer.zip
+76f667089e241863a752578e328284440e8f2ba768853bf060f244e6da19ab38  raziel-across-nosgoth-R67-source.zip
