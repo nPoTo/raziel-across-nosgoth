@@ -1,43 +1,58 @@
-# Building the Windows v0.2 preview
+# Building Raziel Across Nosgoth R64
 
-## Requirements
+Download and extract `raziel-across-nosgoth-R64-source.zip` from this repository or the R64 release. This is the complete corresponding **mod** source, not either game's source or assets. Keep its directory tree unchanged.
 
-- 64-bit Windows with PowerShell 7, Windows PowerShell 5.1, and the .NET Framework 4.x C# compiler.
-- Node.js 24.22 or later.
-- The x64 UCRT LLVM-MinGW toolchain used for this build. Download the [20261006 release](https://github.com/mstorsjo/llvm-mingw/releases/tag/20261006) and locate `bin/x86_64-w64-mingw32-clang.exe` inside it.
-- The original v0.2 setup EXE for the installer repack. Its SHA-256 is `B1E24604642BE44AD6D81A5299F8AA7C9A36645F217AD19331C0DFB4A5E6A311`.
+## Prerequisites
 
-Extract the source archive into a short local directory and run these commands from that directory. Adjust the toolchain and installer paths to match your downloads.
+- Windows x64.
+- An x64 **llvm-mingw Clang/UCRT** toolchain. The native build was checked with llvm-mingw `20261006`.
+- Windows .NET Framework C# compiler (`Framework64/v4.0.30319/csc.exe`) and standard framework assemblies.
+- Node.js 24+ for the JavaScript resource provider. The player package includes its runtime.
+- Supported, separately installed Soul Reaver and Defiance Remastered for resource decoding/gameplay. The source archive contains no game archives or decoded resources.
 
-## 1. Compile the native modules
+## Native module
 
-```powershell
-$clang = 'C:\tools\llvm-mingw\bin\x86_64-w64-mingw32-clang.exe'
-node .\release\build-native.mjs $clang .\build-output\native
-```
-
-This builds MinHook from the included source, then compiles `LOKProbe.asi`, `quick-world-observer.exe`, `Chapter10AutoLoad.asi`, and `Chapter10SpawnPortal.asi` using the recorded compiler arguments and generated headers. The observer is rebuilt with the new probe hash. The results are in `build-output/native/native/`.
-
-## 2. Build the installer
+From the extracted source root, run:
 
 ```powershell
-.\release\Build-SetupFromPreview.ps1 `
-  -PreviewInstaller 'C:\downloads\Raziel Across Nosgoth Setup.exe' `
-  -NativeOutput .\build-output\native `
-  -OutputDirectory .\build-output\setup `
-  -Version '0.2'
+& .\Build-Native.ps1 -Compiler 'C:\path\to\x86_64-w64-mingw32-clang.exe'
 ```
 
-The packaging script verifies the input EXE, extracts its embedded runtime and replaces the four rebuilt binaries and runtime source. It reuses the remaining pinned helper executables, Node.js, the ASI loader, the guide art, and the companion save from the original release. It updates the runtime digests, runs the offline runner check, and builds the self-contained EXE from the included C# and PowerShell installer sources. The EXE appears in `build-output/setup/installer/`.
+`compile-args.json` contains the exact R64 native compiler arguments and feature defines. The archive includes the actual C inputs, local header closure, generated typed sheet records and authored policy JSON inputs. MinHook source and its license are included. Output is `workbench/sr1-local-controller-test/build/defiance-combat-r60/SR1LocalController.asi`.
 
-This preview rebuild reuses the release dependencies listed above. It does not reconstruct every auxiliary helper binary from a blank checkout. A rebuilt installer has different hashes from the original download.
+The internal `r60`/`RazielR60` path names are runtime compatibility names. They are not the public build number; this source is R64. Do not rename them without updating the loader, provider and installation ownership paths together.
 
-## 3. Validate the build
+The native source closure was rebuilt from the staged R64 source. Rebuilding with another compiler or changed flags can produce different bytes. Existing executable/module fingerprints must be revalidated before supporting another game build; do not remove those checks to force compatibility.
 
-Check that the offline runner reports `ready: true` and a verified runtime. For a live test, install on a Windows machine with supported builds of both remastered games. Open the new desktop shortcut and confirm that Defiance loads the companion save, SR1 starts, and the first **F10** enables the mod once Raziel can move. Close both games and use the Windows Apps entry to test uninstall.
+## C# helpers
 
-## Third-party components
+Sources are in `portable/`. Compile for **x64** using the .NET Framework C# compiler:
 
-- [MinHook](https://github.com/TsudaKageyu/minhook) is included under its own license at `dependencies/minhook/LICENSE.txt` in the source archive.
-- [Ultimate ASI Loader v9.7.4](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/tag/v9.7.4) is reused from the release. Its notice is at `workbench/raziel-windows-setup/ASI-LOADER-LICENSE.txt` in the source archive.
-- [Node.js 24.22.1](https://nodejs.org/download/release/v24.22.1/) is reused as a separate runtime.
+| Output | Source files | Target |
+|---|---|---|
+| `RazielBootstrap.exe` | `Bootstrap60.cs`, `PortableCore60.cs` | winexe |
+| `Uninstall R60.exe` | `Uninstall60.cs`, `InstallEngine60.cs`, `PortableCore60.cs` | winexe |
+| `Raziel R64 Setup.exe` | `Setup60.cs`, `InstallEngine60.cs`, `PortableCore60.cs` | winexe |
+
+Reference `System.Windows.Forms`, `System.Drawing`, `System.Web.Extensions`, `System.Core`, `System.IO.Compression` and `System.IO.Compression.FileSystem`. For example, inside `portable/`:
+
+```powershell
+$compiler = "$env:WINDIR\Microsoft.NET\Framework64\v4.0.30319\csc.exe"
+& $compiler /nologo /target:winexe /platform:x64 /out:RazielBootstrap.exe /r:System.Windows.Forms.dll /r:System.Drawing.dll /r:System.Web.Extensions.dll Bootstrap60.cs PortableCore60.cs
+```
+
+The bootstrap is an ordinary user application. Setup and uninstall use a standard application manifest requesting `requireAdministrator` for writes under Program Files. The setup executable embeds the assembled player payload with the resource name **payload.zip** (`/resource:<payload.zip>,payload.zip`).
+
+## Runtime and player payload
+
+`runtime/` contains the portable JavaScript modules/configuration. `portable/portable-config60.mjs` provides the game-directory configuration from the helper's `RAZIEL_GAME_PATHS` value. Do not bake a developer's local paths into the package. Pose/blade/audio/HUD data are decoded from the installed games into RAM.
+
+The R64 installer contains the full allowlisted payload: native ASI, rebuilt C# helpers, JavaScript runtime, permitted Node/ASI loader dependencies, guide, licenses and `SOURCE.zip`. To rebuild the installer, assemble these at the same relative paths, set `RazielR60/package.json` to version `R64` and regenerate its SHA-256 inventory for every payload file except the manifest itself. Update the runtime `host-manifest.json` with the rebuilt ASI hash and preserve the actual resource fingerprints. Embed that ZIP when compiling Setup. The installer verifies every listed payload entry before installation and detects unknown file conflicts.
+
+`portable/package-r64.mjs` documents the source/header-closure and payload staging used for this build. It references the development workspace's resource-capture/build directories; it is **not** advertised as a one-command clean source build. Native compilation and all C# sources are supplied independently above. Node and Ultimate ASI Loader are separately licensed dependencies; use their official distributions and retain their complete notices. Do not obtain or redistribute original game assets as build inputs.
+
+## What was checked
+
+R64 passed typed-sheet preflight, native compilation, native source-closure rebuild, focused production damage/ownership/input/lifecycle tests, installer install/update/uninstall and failure-rollback fixtures, complete payload checksums, embedded-ZIP equality and a relocated RAM-only resource-provider check.
+
+These checks do not certify full campaign compatibility or visual gameplay. R64's new airborne blood/stun presentation, a physical installer click-through and another clean physical PC remain gameplay/manual checks. The release is a public test build.

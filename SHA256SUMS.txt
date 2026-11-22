@@ -1,0 +1,2 @@
+03cc21157e87b9d64de25234b19b77ce7e67000f709957e349745b4164e46ad0  Raziel-R64-Installer.zip
+c80b5dc718a0df561c653366760f80570981dcb6f912b9b0719a9a9b6ddfccef  raziel-across-nosgoth-R64-source.zip

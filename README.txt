@@ -1,32 +1,80 @@
-RAZIEL ACROSS NOSGOTH
-Installation and troubleshooting for the Windows preview
+# Raziel Across Nosgoth — R64
 
-WHAT YOU NEED
-Install Soul Reaver 1 & 2 Remastered and Defiance Remastered on a 64-bit Windows PC. This preview runs in Soul Reaver 1 and uses Defiance in the background. You can use supported builds from Steam, another store or a standalone installation. The EXE contains the mod runtime and the companion save.
+A Windows mod bringing Defiance movement, ground and aerial combat animations, directional dodges, telekinesis, soul-draining finishers and charged Reaver abilities into **Soul Reaver 1 Remastered**. Play the Soul Reaver 1 campaign with your own save. This does not modify the Soul Reaver 2 campaign.
 
-INSTALL
-1. Close both games. If you have an older copy of this mod, uninstall it first.
-2. Double-click Raziel Across Nosgoth Setup.exe. Approve the Windows administrator prompt to let Setup update the game folders.
-3. Click Next and check the two detected game folders. If a folder is missing or incorrect, use Browse or enter the path. Choose the Soul Reaver folder containing SRX.exe and the Defiance folder containing defiance.exe. Click Next to confirm.
-4. Review the folders and click Install. If you see an unknown version warning, click Cancel to return to the wizard. Install anyway copies the package and save but leaves the mod inactive. To activate it later, uninstall the mod, install supported game builds and run Setup again.
-5. Read the guide and click Finish. Setup adds the Raziel Across Nosgoth desktop shortcut and a Defiance Chapter 10 save. It backs up any existing save in that slot.
+**Public test build.** Full campaign, every enemy/boss/puzzle and a second clean physical PC are not fully verified. The new airborne blood/stun presentation still needs gameplay confirmation. Automated checks do not establish visual gameplay acceptance.
 
-PLAY
-1. Open Raziel Across Nosgoth from the desktop. Defiance loads Chapter 10 and hides. Wait for Soul Reaver 1 to open, then load your Soul Reaver save or start a game.
-2. Once you can move, press F10 once. Raziel may briefly stop moving while the mod starts. The light circle by the Windows clock means the mod is on. Look in the hidden tray icons if you cannot see it. Press F10 again to turn the mod off. F7 opens the control guide.
-3. Leave Defiance running in the background. For an ordinary Soul Reaver 1 play session, start the game from its usual shortcut or leave the mod off.
+## Download and install
 
-UNINSTALL
-1. Close Soul Reaver and Defiance. If Defiance is hidden, use Exit Launcher from the mod icon beside the clock or bring Defiance back with Show Defiance and close it normally.
-2. Open Windows Settings, then Apps and Installed apps. Find Raziel Across Nosgoth Preview and choose Uninstall. Approve the Windows prompt if asked.
-3. Uninstall removes the desktop shortcut and mod files. It restores the Defiance save backed up by Setup. Your other saves stay in their game folders. If a file was changed after installation, the uninstaller shows the affected path so it can be checked before retrying.
+1. Install **Legacy of Kain: Soul Reaver 1 & 2 Remastered** and **Legacy of Kain: Defiance Remastered** on Windows 10/11 x64. Both games must work independently. The original non-remastered releases are not supported.
+2. Close both games and back up your saves. [Download the R64 installer ZIP](https://github.com/nPoTo/raziel-across-nosgoth/releases/download/R64/Raziel-R64-Installer.zip).
+3. Extract the ZIP, read the included README and run **Raziel R64 Setup.exe**. Choose the SR1 folder containing `SRX.exe` and `1/sr1.dll`, then the Defiance folder containing `defiance.exe` and `bigfile.x64.dat`. Follow **Next → Install → Finish**.
+4. Start Soul Reaver 1 normally from Steam, its original executable or your existing shortcut. **Defiance must remain installed, but does not need to run.** No companion save or separate launcher is needed.
+5. Load your save and press **F10**. First-time resource preparation can take about a minute or more; F10 can queue activation. The tray icon shows Loading, On or Off. Later F10 presses toggle the mod without preparing the resources again. **F7** opens the complete guide.
 
-TROUBLESHOOTING
-Defiance stays open or Soul Reaver never appears. Close both games, including any hidden instance, and start from the mod shortcut. If you moved or updated a game, uninstall the mod and run Setup again.
-F10 appears to do nothing. Return focus to Soul Reaver, close its menus and wait until Raziel can move. Press F10 once and wait for the light tray circle. If it stays off, restart from the shortcut.
-Raziel cannot move after activation. Give startup time to finish. If the tray still says Starting, press F10 once to cancel. If movement does not return, exit the launcher and both games, then start again from the shortcut.
-The mod stops after a long pause, Alt+Tab or a story scene. Return to the game and check the tray icon. If the mod is off, press F10 to restart it. If you still cannot move, close both games and relaunch.
-Setup detects another mod loader. Keep your existing files and remove the other loader using its own uninstall instructions before retrying.
+Node is bundled; no Python, compiler or development tools are needed to play. The Windows helper uses .NET Framework. Game resources are read from the installed games into RAM; original game archives and saves are not distributed.
 
-WORK IN PROGRESS
-Some encounters, animations and transitions may behave differently from the original game. When reporting an issue, include the game versions, area, action and whether the tray icon changed. You can open the launcher logs by pasting %LOCALAPPDATA%\RazielAcrossNosgoth\runtime into File Explorer's address bar. Share the newest launcher-errors.log or runner log if it shows the problem.
+## Controls
+
+| Action | Keyboard / mouse | Xbox controller |
+|---|---|---|
+| Move | WASD | Left stick |
+| Normal attack / combo | Left click | X |
+| Ground lift / airborne slam | Right click | Y |
+| Jump | Space | A |
+| Target lock | Hold Shift | Hold LB |
+| Directional dodge | Shift + Space + direction | LB + A + direction |
+| Telekinesis | F | B |
+| Feed / finish eligible stunned enemy | E | RB |
+| Cycle unlocked swords | Mouse wheel, Z / X | D-pad Left / Right |
+| Select unlocked sword | 1–8, including numpad | — |
+| Glyph menu / map | C / M | Down then A for realm selection |
+| Toggle mod / guide | F10 / F7 | Use keyboard hotkeys |
+
+Realm shifting still follows the game's requirements, including a usable portal when returning to Material. Carried physical weapons/items, water, gliding, story scenes and menus retain native SR1 rules.
+
+## Combos and abilities
+
+- **Ground chain:** press normal attack repeatedly to link strikes.
+- **Thrust series:** enter a new direction and immediately press normal attack, then continue attacking. Release/re-enter a long-held direction to create a new directional input.
+- **Launcher:** hold right click / Y on the ground. A quick tap and a hold have different actions.
+- **Aerial chain:** jump and use normal attacks.
+- **Helicopter:** while airborne, enter a new direction and immediately use normal attack. Further presses fund two rotations each, up to ten. Each actual enemy contact deals the selected sword's normal strike damage; a missed rotation does not damage anything.
+- **Air slam:** right click / Y in the air. The directional special variant adds a rebound.
+- **Finisher:** approach an eligible stunned enemy and press E / RB. No extra ground strike should be needed after airborne exhaustion.
+- **Charged spell:** fill the sword meter through real hits, then hold normal attack for about one second. The release spends the full meter. Enemies actually damaged by a charged spell cannot regenerate for eight seconds.
+
+## Reavers and progression
+
+Acquire the base Soul Reaver in your current save first. Losing health does not revoke an acquired Reaver. The blade appears during combat or target lock. Cycling skips locked forms; loading another save uses that save's own unlocks.
+
+| Number | Form | Unlock |
+|---|---|---|
+| 1 | Normal / Spectral | Base Reaver; form follows the current realm |
+| 2 | Dark | Force Glyph |
+| 3 | Earth | Stone Glyph |
+| 4 | Water | Water Glyph |
+| 5 | Wind | Sound Glyph |
+| 6 | Fire | Fire Glyph |
+| 7 | Light | Sunlight Glyph |
+| 8 | Spirit | All Glyphs including Shift; Material only |
+
+Standard Reaver strikes deal **500 + 300 per acquired elemental form**. Spirit deals **5,000**. Helicopter contacts use the same sword damage. Native enemy vulnerabilities and boss conditions still apply. The sword meter and full-charge effects show charge; there is no HP/DMG test popup.
+
+## Optional debug shortcuts
+
+**F6** grants the base Reaver. **F9 while the mod is Off** toggles the all-powers/Glyphs/portals/health/mana preset. Pressing F9 again restores the captured state in the same session, but saving the game can make changes persist. Back up saves before using these shortcuts. Native debug options are available through **Pause → Debug** and are not required for ordinary play.
+
+## Help and uninstall
+
+If Loading is shown, wait. If Off is shown, focus SR1 and press F10. Use the **Choose Defiance folder** button in the F7 guide if the installation was not detected; restart SR1 after correcting a resource-loading failure. A missing sword may simply be locked in the current save or realm.
+
+For an installer installation, close both games and run `RazielR60/Uninstall R60.exe` inside the SR1 folder. It restores backed-up owned files and preserves saves/user-modified files. `RazielR60` is the package's internal folder name: keep its spelling unchanged. Logs are under `%LOCALAPPDATA%/RazielAcrossNosgoth/R60/run-*`.
+
+See [README.txt](README.txt) for the complete installation and field guide, and [BUILD.md](BUILD.md) for source/rebuild instructions.
+
+## Source, licensing and credits
+
+The complete corresponding R64 mod source is supplied as [raziel-across-nosgoth-R64-source.zip](raziel-across-nosgoth-R64-source.zip), and is also embedded in the installer payload as `RazielR60/SOURCE.zip`. It contains the native compiler inputs/header closure, authored typed policy inputs, runtime JavaScript and C# bootstrap/installer/uninstaller sources. The versioned archive is the source distribution in this repository.
+
+The mod is **GPL-3.0-or-later**; see [LICENSE](LICENSE). Dependencies include MinHook (BSD-style), Ultimate ASI Loader (MIT) and Node.js with its dependency notices. Their licenses/attributions are included. Original game resources and trademarks belong to their respective owners. No game archives, saves, credentials or gameplay captures are included.
