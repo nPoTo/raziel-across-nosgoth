@@ -1,2 +1,2 @@
-1b507104758549f5fbf926a47c3461d33531464aa6f0920e15d72d9f0920be20  Raziel-R73-Installer.zip
-e010615e5a9c282913b3488aeb7a5618e952b626e7a5d71343745a3f6645115d  raziel-across-nosgoth-R73-source.zip
+c7b68ddd9aef19eef6a3458406ad9a53cd415f01f11a119b36dc3eee4cad4cc5  Raziel-R77-Installer.zip
+b443091b468907bb39bfb301c9718e8b7e22a2164bfea05e2042c749b44d103d  raziel-across-nosgoth-R77-source.zip

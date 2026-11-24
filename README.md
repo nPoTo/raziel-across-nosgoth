@@ -1,20 +1,20 @@
-# Raziel Across Nosgoth — R73
+# Raziel Across Nosgoth — R77
 
 A Windows mod bringing Defiance movement, ground and aerial combat animations, directional dodges, telekinesis, soul-draining finishers and charged Reaver abilities into **Soul Reaver 1 Remastered**. Play the Soul Reaver 1 campaign with your own save. This does not modify the Soul Reaver 2 campaign.
 
-**Public test build.** Full campaign, every enemy/boss/puzzle and a second clean physical PC are not fully verified. The latest lighting appearance and full campaign coverage still need gameplay confirmation. If you get stuck, switch the mod Off with F10, complete the action, then switch it On again and report what happened.
+**Public test build.** Full campaign, every enemy/boss/puzzle and a second clean physical PC are not fully verified. Hand appearance and full campaign coverage remain subject to gameplay feedback. If you get stuck, switch the mod Off with F10, complete the action, then switch it On again and report what happened.
 
 ## Download and install
 
 1. Install **Legacy of Kain: Soul Reaver 1 & 2 Remastered** and **Legacy of Kain: Defiance Remastered** on Windows 10/11 x64. Both games must work independently. The original non-remastered releases are not supported.
-2. Close both games and back up your saves. [Download the R73 installer ZIP](https://github.com/nPoTo/raziel-across-nosgoth/releases/download/R73/Raziel-R73-Installer.zip).
-3. Extract the ZIP, read the included README and run **Raziel R73 Setup.exe**. Choose the SR1 folder containing `SRX.exe` and `1/sr1.dll`, then the Defiance folder containing `defiance.exe` and `bigfile.x64.dat`. Follow **Next → Install → Finish**.
+2. Close both games and back up your saves. [Download the R77 installer ZIP](https://github.com/nPoTo/raziel-across-nosgoth/releases/download/R77/Raziel-R77-Installer.zip).
+3. Extract the ZIP, read the included README and run **Raziel R77 Setup.exe**. Choose the SR1 folder containing `SRX.exe` and `1/sr1.dll`, then the Defiance folder containing `defiance.exe` and `bigfile.x64.dat`. Follow **Next → Install → Finish**.
 4. Start Soul Reaver 1 normally from Steam, its original executable or your existing shortcut. **Defiance must remain installed, but does not need to run.** No companion save or separate launcher is needed.
 5. Load your save and press **F10**. First-time resource preparation can take about a minute or more; F10 can queue activation. The tray icon shows Loading, On or Off. Later F10 presses toggle the mod without preparing the resources again. **F7** opens the complete guide.
 
 Node is bundled; no Python, compiler or development tools are needed to play. The Windows helper uses .NET Framework. Game resources are read from the installed games into RAM; original game archives and saves are not distributed.
 
-**R73 update:** Reaver swings leave a coloured trail. Changing forms produces a flash, and the blade lights nearby surfaces. Full charge smoothly doubles the new lighting brightness. Also includes the revised English F7 Field Guide, target-unlock fixes, Reaver On/Off with F6, Debug-menu fixes, first Kain encounter contact support and rotated sword symbols. The latest lighting appearance and full campaign coverage still need gameplay confirmation.
+**R77 update:** Sword trails and switch flashes use the selected blade colour. Full charge lights Raziel's eyes and adds coloured electrical details to the side meter. F7 includes a Combo controls button. Thrust attacks aim toward the target and follow it with short steps, including a larger final step. Hits on stunned enemies give half the normal charge. The hand uses the transferred Defiance pose. Full campaign coverage and another clean PC remain unverified.
 
 ## Controls
 
@@ -30,7 +30,7 @@ Node is bundled; no Python, compiler or development tools are needed to play. Th
 | Feed / finish eligible stunned enemy | E | RB |
 | Cycle unlocked swords | Mouse wheel, Z / X | D-pad Left / Right |
 | Select unlocked sword | 1–8, including numpad | — |
-| Glyph menu | C | View / Select |
+| Glyph menu | Tab | View / Select |
 | Map | M | Press right stick (R3) |
 | Quick realm selection | C, release, then Space | D-pad Down, release, then A |
 | Toggle mod / guide | F10 / F7 | Use keyboard hotkeys |
@@ -38,6 +38,8 @@ Node is bundled; no Python, compiler or development tools are needed to play. Th
 Realm shifting still follows the game's requirements, including a usable portal when returning to Material. Carried physical weapons/items, water, gliding, story scenes and menus retain native SR1 rules.
 
 ## Combos and abilities
+
+In the F7 guide, click **Combo controls** for all 14 move mappings. Side openers follow the attack direction. A new direction followed by F / B performs Stasis Field when its strike hits an enemy.
 
 - **Ground chain:** press normal attack repeatedly to link strikes.
 - **Thrust series:** enter a new direction and immediately press normal attack, then continue attacking. Release/re-enter a long-held direction to create a new directional input.
@@ -79,7 +81,7 @@ See [README.txt](README.txt) for the complete installation and field guide, and 
 
 ## Source, licensing and credits
 
-The complete corresponding R73 mod source is supplied as [raziel-across-nosgoth-R73-source.zip](raziel-across-nosgoth-R73-source.zip), and is also embedded in the installer payload as `RazielR60/SOURCE.zip`. It contains the native compiler inputs/header closure, authored typed policy inputs, runtime JavaScript and C# bootstrap/installer/uninstaller sources. The versioned archive is the source distribution in this repository.
+The complete corresponding R77 mod source is supplied as [raziel-across-nosgoth-R77-source.zip](raziel-across-nosgoth-R77-source.zip), and is also embedded in the installer payload as `RazielR60/SOURCE.zip`. It contains the native compiler inputs/header closure, authored typed policy inputs, runtime JavaScript and C# bootstrap/installer/uninstaller sources. The versioned archive is the source distribution in this repository.
 
 The mod is **GPL-3.0-or-later**; see [LICENSE](LICENSE). Dependencies include MinHook (BSD-style), Ultimate ASI Loader (MIT) and Node.js with its dependency notices. Their licenses/attributions are included. Original game resources and trademarks belong to their respective owners. No game archives, saves, credentials or gameplay captures are included.
 

@@ -1,5 +1,27 @@
 # Changes by version
 
+## R77
+
+- Added a larger final step to help the last thrust reach a retreating enemy.
+- Restored the transferred hand pose.
+- Added bright electrical cores, a small coil inside the meter and glowing skull eyes at full charge.
+
+## R76
+
+- Improved thrust aiming and short follow steps.
+- Full charge colours the complete eye surface.
+- Hits on stunned enemies give half the normal sword charge.
+
+## R75
+
+- Sword trails and switching flashes now match the blade colour.
+- Added a Combo controls panel to F7, side openers and directional Stasis Field.
+- Fixed mixed-button jump release and flashes while the sword is hidden.
+
+## R74
+
+- Adjusted the trail and form-switch flash to avoid washing the sword colour out to white.
+
 ## R73
 
 - Added a coloured trail when swinging the Reaver and a flash when changing sword forms.
