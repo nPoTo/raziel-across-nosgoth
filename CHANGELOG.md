@@ -1,5 +1,16 @@
 # Changes by version
 
+## R79
+
+- Added built-in update checks, download progress and optional installation from GitHub.
+- F9 fills maximum HP and mana; a second press restores the saved values.
+- F7 is preloaded and opens above the game without a separate taskbar entry.
+- Shortened the README and added Glyph unlocks, damage and enemy HP examples.
+
+## R78 — local experiment, reverted
+
+- Tried a different wrist and finger pose. It was not published; R79 keeps the R77 hand.
+
 ## R77
 
 - Added a larger final step to help the last thrust reach a retreating enemy.

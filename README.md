@@ -1,92 +1,57 @@
-# Raziel Across Nosgoth — R77
+# Raziel Across Nosgoth — R79
 
-A Windows mod bringing Defiance movement, ground and aerial combat animations, directional dodges, telekinesis, soul-draining finishers and charged Reaver abilities into **Soul Reaver 1 Remastered**. Play the Soul Reaver 1 campaign with your own save. This does not modify the Soul Reaver 2 campaign.
+Defiance-style movement, combat and Reaver powers in Soul Reaver 1 Remastered.
 
-**Public test build.** Full campaign, every enemy/boss/puzzle and a second clean physical PC are not fully verified. Hand appearance and full campaign coverage remain subject to gameplay feedback. If you get stuck, switch the mod Off with F10, complete the action, then switch it On again and report what happened.
+## REQUIRES
+Windows 10/11 x64 and both installed games:
+- Legacy of Kain: Soul Reaver 1 & 2 Remastered
+- Legacy of Kain: Defiance Remastered
+The original non-remastered games are not supported. Defiance must stay installed, but does not need to run. No extra launcher or development tools are needed.
 
-## Download and install
+## INSTALL
+1. Close both games and back up your saves.
+2. Extract the downloaded installer ZIP and run Raziel R79 Setup.exe.
+3. Choose the Soul Reaver folder containing SRX.exe, then the Defiance folder containing defiance.exe. Click Next, Install, Finish.
+4. Start Soul Reaver 1 normally, load your save and press F10. Wait for the first resource loading to finish.
 
-1. Install **Legacy of Kain: Soul Reaver 1 & 2 Remastered** and **Legacy of Kain: Defiance Remastered** on Windows 10/11 x64. Both games must work independently. The original non-remastered releases are not supported.
-2. Close both games and back up your saves. [Download the R77 installer ZIP](https://github.com/nPoTo/raziel-across-nosgoth/releases/download/R77/Raziel-R77-Installer.zip).
-3. Extract the ZIP, read the included README and run **Raziel R77 Setup.exe**. Choose the SR1 folder containing `SRX.exe` and `1/sr1.dll`, then the Defiance folder containing `defiance.exe` and `bigfile.x64.dat`. Follow **Next → Install → Finish**.
-4. Start Soul Reaver 1 normally from Steam, its original executable or your existing shortcut. **Defiance must remain installed, but does not need to run.** No companion save or separate launcher is needed.
-5. Load your save and press **F10**. First-time resource preparation can take about a minute or more; F10 can queue activation. The tray icon shows Loading, On or Off. Later F10 presses toggle the mod without preparing the resources again. **F7** opens the complete guide.
+## MAIN BUTTONS
+- **F10:** mod On/Off.
+- **F7:** guide above the game. Choose Combo controls for the move list.
+- **F6:** Reaver On/Off.
+- **F9:** all powers, swords, portals, maximum HP and full mana On/Off. First press saves your current values; second press restores them for the same character/session. Stand on the ground with menus closed. Saving the game can make cheats persist.
 
-Node is bundled; no Python, compiler or development tools are needed to play. The Windows helper uses .NET Framework. Game resources are read from the installed games into RAM; original game archives and saves are not distributed.
+Move: WASD / left stick. Jump: Space / A.
+Attack: left click / X. Lift or air slam: right click / Y.
+Target lock: hold Shift / LB. Dodge: direction + Shift + Space / direction + LB + A.
+Telekinesis: F / B. Feed or finish a stunned enemy: E / RB.
+Change sword: mouse wheel, Z/X / D-pad Left/Right. Select directly: 1–8.
 
-**R77 update:** Sword trails and switch flashes use the selected blade colour. Full charge lights Raziel's eyes and adds coloured electrical details to the side meter. F7 includes a Combo controls button. Thrust attacks aim toward the target and follow it with short steps, including a larger final step. Hits on stunned enemies give half the normal charge. The hand uses the transferred Defiance pose. Full campaign coverage and another clean PC remain unverified.
+## STORY AND SWORDS
+You can play unarmed up to the first Kain encounter. For the normal story, leave the mod Off until you earn the Reaver. F6 can give or remove it if you prefer.
 
-## Controls
+- **1 Normal / Spectral:** the acquired Reaver; appearance follows the realm.
+- **2 Dark:** Force Glyph.
+- **3 Earth:** Stone Glyph.
+- **4 Water:** Water Glyph.
+- **5 Wind:** Sound Glyph.
+- **6 Fire:** Fire Glyph.
+- **7 Light:** Sunlight Glyph.
+- **8 Spirit:** all Glyphs, including Shift; Material only.
 
-| Action | Keyboard / mouse | Xbox controller |
-|---|---|---|
-| Move | WASD | Left stick |
-| Normal attack / combo | Left click | X |
-| Ground lift / airborne slam | Right click | Y |
-| Jump | Space | A |
-| Target lock | Hold Shift | Hold LB |
-| Directional dodge | Shift + Space + direction | LB + A + direction |
-| Telekinesis | F | B |
-| Feed / finish eligible stunned enemy | E | RB |
-| Cycle unlocked swords | Mouse wheel, Z / X | D-pad Left / Right |
-| Select unlocked sword | 1–8, including numpad | — |
-| Glyph menu | Tab | View / Select |
-| Map | M | Press right stick (R3) |
-| Quick realm selection | C, release, then Space | D-pad Down, release, then A |
-| Toggle mod / guide | F10 / F7 | Use keyboard hotkeys |
+Normal, Spectral and elemental swords deal 500 damage plus 300 for each unlocked elemental sword: 500 with no elemental forms, 800 with one, up to 2,300 with all six. Each unlocked element increases the damage of every standard sword. Spirit deals a fixed 5,000. Helicopter contacts use the selected sword's normal damage.
 
-Realm shifting still follows the game's requirements, including a usable portal when returning to Material. Carried physical weapons/items, water, gliding, story scenes and menus retain native SR1 rules.
+Examples from measured enemies: one Sluagh has 6,144 HP; one Ronin variant has 15,360 HP. Enemy variants can differ. A 2,300-damage sword needs 3 and 7 successful hits respectively, ignoring regeneration, resistance and special vulnerability rules. Stunned enemies may need a finisher rather than further damage.
 
-## Combos and abilities
+Fill the sword meter by hitting enemies. At full charge, hold attack for one second to release its spell. Hits on stunned enemies give half the normal charge.
 
-In the F7 guide, click **Combo controls** for all 14 move mappings. Side openers follow the attack direction. A new direction followed by F / B performs Stasis Field when its strike hits an enemy.
+## UPDATES
+When SR1 starts, the mod checks the project's GitHub releases in the background. No newer version, no internet or a failed check: nothing appears.
+If a newer version is available, choose Yes or No to download it. Yes downloads the installer EXE into the mod's updates folder with a horizontal progress bar. The file is checked before installation.
+After downloading, choose Yes or No to install. Yes closes the games and updates the mod; save your progress before choosing it. No leaves the installer downloaded for later. A successful update shows DONE, the installed version and Finish. Windows may ask for administrator permission to write inside Program Files.
 
-- **Ground chain:** press normal attack repeatedly to link strikes.
-- **Thrust series:** enter a new direction and immediately press normal attack, then continue attacking. Release/re-enter a long-held direction to create a new directional input.
-- **Launcher:** hold right click / Y on the ground. A quick tap and a hold have different actions.
-- **Aerial chain:** jump and use normal attacks.
-- **Helicopter:** while airborne, enter a new direction and immediately use normal attack. Further presses fund two rotations each, up to ten. Each actual enemy contact deals the selected sword's normal strike damage; a missed rotation does not damage anything.
-- **Air slam:** right click / Y in the air. The directional special variant adds a rebound.
-- **Finisher:** approach an eligible stunned enemy and press E / RB. No extra ground strike should be needed after airborne exhaustion.
-- **Charged spell:** fill the sword meter through real hits, then hold normal attack for about one second. The release spends the full meter. Enemies actually damaged by a charged spell cannot regenerate for eight seconds.
+## UNINSTALL
+Close both games. Open the Soul Reaver folder, then RazielR60, and run Uninstall R60.exe. It restores files backed up by the installer and preserves saves and user-modified files. RazielR60 is the internal folder name; do not rename it.
 
-## Reavers and progression
+This is a test release. Full campaign coverage and a second clean PC are not fully verified. If an action fails, try F10 Off and report it. The mod uses GPL-3.0-or-later. Original game files and saves are not distributed.
 
-Acquire the base Soul Reaver in your current save first. Losing health does not revoke an acquired Reaver. The blade appears during combat or target lock. Cycling skips locked forms; loading another save uses that save's own unlocks.
-
-| Number | Form | Unlock |
-|---|---|---|
-| 1 | Normal / Spectral | Base Reaver; form follows the current realm |
-| 2 | Dark | Force Glyph |
-| 3 | Earth | Stone Glyph |
-| 4 | Water | Water Glyph |
-| 5 | Wind | Sound Glyph |
-| 6 | Fire | Fire Glyph |
-| 7 | Light | Sunlight Glyph |
-| 8 | Spirit | All Glyphs including Shift; Material only |
-
-Standard Reaver strikes deal **500 + 300 per acquired elemental form**. Spirit deals **5,000**. Helicopter contacts use the same sword damage. Native enemy vulnerabilities and boss conditions still apply. The sword meter and full-charge effects show charge; there is no HP/DMG test popup.
-
-## Optional debug shortcuts
-
-**F6** toggles the base Reaver On/Off. **F9** toggles the all-powers/Glyphs/portals/health/mana preset. Pressing F9 again restores the captured state in the same session, but saving the game can make changes persist. Back up saves before using these shortcuts. The original Debug menu opens with **F10 Off, then E + left click / B + X**. These shortcuts are not required for ordinary play.
-
-## Help and uninstall
-
-If Loading is shown, wait. If Off is shown, focus SR1 and press F10. Use the **Choose Defiance folder** button in the F7 guide if the installation was not detected; restart SR1 after correcting a resource-loading failure. A missing sword may simply be locked in the current save or realm.
-
-For an installer installation, close both games and run `RazielR60/Uninstall R60.exe` inside the SR1 folder. It restores backed-up owned files and preserves saves/user-modified files. `RazielR60` is the package's internal folder name: keep its spelling unchanged. Logs are under `%LOCALAPPDATA%/RazielAcrossNosgoth/R60/run-*`.
-
-See [README.txt](README.txt) for the complete installation and field guide, and [BUILD.md](BUILD.md) for source/rebuild instructions.
-
-## Source, licensing and credits
-
-The complete corresponding R77 mod source is supplied as [raziel-across-nosgoth-R77-source.zip](raziel-across-nosgoth-R77-source.zip), and is also embedded in the installer payload as `RazielR60/SOURCE.zip`. It contains the native compiler inputs/header closure, authored typed policy inputs, runtime JavaScript and C# bootstrap/installer/uninstaller sources. The versioned archive is the source distribution in this repository.
-
-The mod is **GPL-3.0-or-later**; see [LICENSE](LICENSE). Dependencies include MinHook (BSD-style), Ultimate ASI Loader (MIT) and Node.js with its dependency notices. Their licenses/attributions are included. Original game resources and trademarks belong to their respective owners. No game archives, saves, credentials or gameplay captures are included.
-
-Shortcut feedback: F6 and F9 require focused, ordinary grounded gameplay. Requests wait up to five seconds for a safe frame. F6 grants the native base-Reaver acquisition flags. F9 temporarily suspends mod hooks before changing powers and resumes the previous activation choice. The last result is shown at the top of F7 and in a tray notification. Changes may persist if the game saves.
-
-Original Debug menu: turn the mod Off with F10, release the buttons, then press E + left click on keyboard/mouse or B + X on controller. Use the same combination to close it, then F10 to resume. There is no added Pause → Debug row. The original menu includes Levels, Raziel, Goodies, Camera and AI/Script options. Debug changes can alter progress; back up your saves.
-
-
+[Download the installer ZIP](https://github.com/nPoTo/raziel-across-nosgoth/releases/download/R79/Raziel-R79-Installer.zip) · [Matching source](https://github.com/nPoTo/raziel-across-nosgoth/releases/download/R79/raziel-across-nosgoth-R79-source.zip) · [Build instructions](BUILD.md)

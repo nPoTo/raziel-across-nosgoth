@@ -1,2 +1,3 @@
-c7b68ddd9aef19eef6a3458406ad9a53cd415f01f11a119b36dc3eee4cad4cc5  Raziel-R77-Installer.zip
-b443091b468907bb39bfb301c9718e8b7e22a2164bfea05e2042c749b44d103d  raziel-across-nosgoth-R77-source.zip
+77c9516174b45195ccae7b8bde114cc500c9f58f4d02bebf7c5802b179ceed87  Raziel-R79-Installer.zip
+970201edc127318e83ab4f8aef126e92ee9670247f16b1a1baef8c9d44956c14  Raziel R79 Setup.exe
+1f22d97e036f56591573ae9e4434cb62796703b7253097f7962df7260470cdac  raziel-across-nosgoth-R79-source.zip
