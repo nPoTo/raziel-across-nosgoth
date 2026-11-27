@@ -1,5 +1,11 @@
 # Changes by version
 
+## R117–R118
+
+- Improved returning to an unfinished Kain fight and hiding the Ronin used underneath his model.
+- Kain waits for the opening scene to finish or be skipped before fighting.
+- Scene transitions clear his pending attacks and keep his remaining health for the fight.
+
 ## R79 → R116
 
 - Added the new first Kain boss fight, using original Defiance AI decisions with SR1 movement and hits.

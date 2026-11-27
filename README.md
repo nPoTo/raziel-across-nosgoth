@@ -1,4 +1,4 @@
-# Raziel Across Nosgoth R116
+# Raziel Across Nosgoth R118
 
 REQUIRES
 Windows 10/11 x64, Soul Reaver 1 & 2 Remastered, and Defiance Remastered.
@@ -6,7 +6,7 @@ Keep both games installed. Defiance does not need to run.
 
 INSTALL OR UPDATE
 1. Close both games.
-2. Extract Raziel-R116-Installer.zip and run Raziel R116 Setup.exe.
+2. Extract Raziel-R118-Installer.zip and run Raziel R118 Setup.exe.
 3. Choose your Soul Reaver and Defiance installation folders. Click Next, Install, Finish.
 4. Start SR1 through Steam, SRX.exe or your shortcut, load a save and press F10.
    Allow the first resource loading to finish. F7 opens the guide and Combo controls.
@@ -38,24 +38,18 @@ AUTOMATIC UPDATES
 Starting SR1 checks GitHub in the background. No new version means no popup.
 Choose Yes to download, watch the progress bar, then Yes to install.
 Save first. Install Yes closes the games. Success shows DONE, the version and Finish.
-If you use R79, start SR1 online and accept the R116 offer.
+Existing installations can update from the offer shown when SR1 starts online.
 
 UNINSTALL
 Close both games. In the SR1 folder open RazielR60 and run Uninstall R60.exe.
 It restores the files backed up during installation. Saves are preserved.
 
-Public test release. Full campaign coverage and the updater on another PC still
-need testing. Mod source is GPL-3.0-or-later and is included as SOURCE.zip.
+Public test release. Full campaign coverage is still being tested. Mod source is GPL-3.0-or-later and is included as SOURCE.zip.
 Downloads and updates: https://github.com/nPoTo/raziel-across-nosgoth/releases
 
 
-## R79 → R116
+## R117–R118
 
-- Added the new first Kain boss fight, using original Defiance AI decisions with SR1 movement and hits.
-- Kain has a health bar, fast combos, telekinesis, charged sword attacks and a charged beam.
-- The fight starts after the original opening scene. Kain is visible in the ending scene, and the story continues.
-- You can fight Kain with fists or any unlocked Reaver. He keeps his remaining HP when you return after death.
-- Balanced Kain's damage rules and gave Raziel the same internal HP capacity for this fight.
-- Fixed the full Spectral transition after death and improved recovery after aerial hits.
-- Fixed F9 restoring the saved powers, HP and mana, and the pre-fight status returning at the end.
-- Improved the coloured Reaver glow and charged coil along Raziel's arm. Reaver sounds are 20% quieter.
+- Improved returning to an unfinished Kain fight and hiding the Ronin used underneath his model.
+- Kain waits for the opening scene to finish or be skipped before fighting.
+- Scene transitions clear his pending attacks and keep his remaining health for the fight.

@@ -1,4 +1,4 @@
-RAZIEL ACROSS NOSGOTH — R116
+RAZIEL ACROSS NOSGOTH — R118
 
 REQUIRES
 Windows 10/11 x64, Soul Reaver 1 & 2 Remastered, and Defiance Remastered.
@@ -6,7 +6,7 @@ Keep both games installed. Defiance does not need to run.
 
 INSTALL OR UPDATE
 1. Close both games.
-2. Extract Raziel-R116-Installer.zip and run Raziel R116 Setup.exe.
+2. Extract Raziel-R118-Installer.zip and run Raziel R118 Setup.exe.
 3. Choose your Soul Reaver and Defiance installation folders. Click Next, Install, Finish.
 4. Start SR1 through Steam, SRX.exe or your shortcut, load a save and press F10.
    Allow the first resource loading to finish. F7 opens the guide and Combo controls.
@@ -38,12 +38,11 @@ AUTOMATIC UPDATES
 Starting SR1 checks GitHub in the background. No new version means no popup.
 Choose Yes to download, watch the progress bar, then Yes to install.
 Save first. Install Yes closes the games. Success shows DONE, the version and Finish.
-If you use R79, start SR1 online and accept the R116 offer.
+Existing installations can update from the offer shown when SR1 starts online.
 
 UNINSTALL
 Close both games. In the SR1 folder open RazielR60 and run Uninstall R60.exe.
 It restores the files backed up during installation. Saves are preserved.
 
-Public test release. Full campaign coverage and the updater on another PC still
-need testing. Mod source is GPL-3.0-or-later and is included as SOURCE.zip.
+Public test release. Full campaign coverage is still being tested. Mod source is GPL-3.0-or-later and is included as SOURCE.zip.
 Downloads and updates: https://github.com/nPoTo/raziel-across-nosgoth/releases
