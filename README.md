@@ -1,57 +1,61 @@
-# Raziel Across Nosgoth — R79
+# Raziel Across Nosgoth R116
 
-Defiance-style movement, combat and Reaver powers in Soul Reaver 1 Remastered.
+REQUIRES
+Windows 10/11 x64, Soul Reaver 1 & 2 Remastered, and Defiance Remastered.
+Keep both games installed. Defiance does not need to run.
 
-## REQUIRES
-Windows 10/11 x64 and both installed games:
-- Legacy of Kain: Soul Reaver 1 & 2 Remastered
-- Legacy of Kain: Defiance Remastered
-The original non-remastered games are not supported. Defiance must stay installed, but does not need to run. No extra launcher or development tools are needed.
+INSTALL OR UPDATE
+1. Close both games.
+2. Extract Raziel-R116-Installer.zip and run Raziel R116 Setup.exe.
+3. Choose your Soul Reaver and Defiance installation folders. Click Next, Install, Finish.
+4. Start SR1 through Steam, SRX.exe or your shortcut, load a save and press F10.
+   Allow the first resource loading to finish. F7 opens the guide and Combo controls.
 
-## INSTALL
-1. Close both games and back up your saves.
-2. Extract the downloaded installer ZIP and run Raziel R79 Setup.exe.
-3. Choose the Soul Reaver folder containing SRX.exe, then the Defiance folder containing defiance.exe. Click Next, Install, Finish.
-4. Start Soul Reaver 1 normally, load your save and press F10. Wait for the first resource loading to finish.
+MAIN BUTTONS
+F10 — mod On/Off. F7 — guide. F6 — Reaver On/Off.
+F9 — save your current powers, HP and mana, then grant everything. Press again to restore.
+Attack — X / left click. Lift or air slam — Y / right click.
+Lock — hold LB / Shift. Dodge — direction + LB + A / direction + Shift + Space.
+Telekinesis — B / F. Feed or finish a stunned enemy — RB / E.
+Change sword — D-pad Left/Right / Z and X. Glyph menu — View / Tab.
+Quick realm shift — D-pad Down, release, then A. Use a portal to return to Material.
+Original Debug — F10 Off, release buttons, then B + X / E + left click.
 
-## MAIN BUTTONS
-- **F10:** mod On/Off.
-- **F7:** guide above the game. Choose Combo controls for the move list.
-- **F6:** Reaver On/Off.
-- **F9:** all powers, swords, portals, maximum HP and full mana On/Off. First press saves your current values; second press restores them for the same character/session. Stand on the ground with menus closed. Saving the game can make cheats persist.
+STORY AND SWORDS
+You can fight the first Kain unarmed. F6 gives or removes the Reaver.
+Glyphs unlock swords: Force = Dark, Stone = Earth, Water = Water,
+Sound = Wind, Fire = Fire, Sunlight = Light. All seven Glyphs unlock Spirit.
+Standard swords deal 500 + 300 per unlocked elemental form, up to 2,300.
+Spirit deals 5,000. One measured SR1 Sluagh has 6,144 HP; one Ronin variant has 15,360.
+Variants, regeneration and special vulnerability rules affect the number of hits.
+During the new first Kain fight, damage uses its own rules. Normal sword hits take
+1–2% of his total HP, fists 5–7%, and Spirit 10%. Damaging Glyphs take up to 10%
+and cannot finish him; Force pushes him away. Raziel gets 500,000 internal HP for
+this encounter while keeping the usual spiral size. His pre-door status returns
+before the ending scene. Load a save before the door to test the complete sequence.
 
-Move: WASD / left stick. Jump: Space / A.
-Attack: left click / X. Lift or air slam: right click / Y.
-Target lock: hold Shift / LB. Dodge: direction + Shift + Space / direction + LB + A.
-Telekinesis: F / B. Feed or finish a stunned enemy: E / RB.
-Change sword: mouse wheel, Z/X / D-pad Left/Right. Select directly: 1–8.
+AUTOMATIC UPDATES
+Starting SR1 checks GitHub in the background. No new version means no popup.
+Choose Yes to download, watch the progress bar, then Yes to install.
+Save first. Install Yes closes the games. Success shows DONE, the version and Finish.
+If you use R79, start SR1 online and accept the R116 offer.
 
-## STORY AND SWORDS
-You can play unarmed up to the first Kain encounter. For the normal story, leave the mod Off until you earn the Reaver. F6 can give or remove it if you prefer.
+UNINSTALL
+Close both games. In the SR1 folder open RazielR60 and run Uninstall R60.exe.
+It restores the files backed up during installation. Saves are preserved.
 
-- **1 Normal / Spectral:** the acquired Reaver; appearance follows the realm.
-- **2 Dark:** Force Glyph.
-- **3 Earth:** Stone Glyph.
-- **4 Water:** Water Glyph.
-- **5 Wind:** Sound Glyph.
-- **6 Fire:** Fire Glyph.
-- **7 Light:** Sunlight Glyph.
-- **8 Spirit:** all Glyphs, including Shift; Material only.
+Public test release. Full campaign coverage and the updater on another PC still
+need testing. Mod source is GPL-3.0-or-later and is included as SOURCE.zip.
+Downloads and updates: https://github.com/nPoTo/raziel-across-nosgoth/releases
 
-Normal, Spectral and elemental swords deal 500 damage plus 300 for each unlocked elemental sword: 500 with no elemental forms, 800 with one, up to 2,300 with all six. Each unlocked element increases the damage of every standard sword. Spirit deals a fixed 5,000. Helicopter contacts use the selected sword's normal damage.
 
-Examples from measured enemies: one Sluagh has 6,144 HP; one Ronin variant has 15,360 HP. Enemy variants can differ. A 2,300-damage sword needs 3 and 7 successful hits respectively, ignoring regeneration, resistance and special vulnerability rules. Stunned enemies may need a finisher rather than further damage.
+## R79 → R116
 
-Fill the sword meter by hitting enemies. At full charge, hold attack for one second to release its spell. Hits on stunned enemies give half the normal charge.
-
-## UPDATES
-When SR1 starts, the mod checks the project's GitHub releases in the background. No newer version, no internet or a failed check: nothing appears.
-If a newer version is available, choose Yes or No to download it. Yes downloads the installer EXE into the mod's updates folder with a horizontal progress bar. The file is checked before installation.
-After downloading, choose Yes or No to install. Yes closes the games and updates the mod; save your progress before choosing it. No leaves the installer downloaded for later. A successful update shows DONE, the installed version and Finish. Windows may ask for administrator permission to write inside Program Files.
-
-## UNINSTALL
-Close both games. Open the Soul Reaver folder, then RazielR60, and run Uninstall R60.exe. It restores files backed up by the installer and preserves saves and user-modified files. RazielR60 is the internal folder name; do not rename it.
-
-This is a test release. Full campaign coverage and a second clean PC are not fully verified. If an action fails, try F10 Off and report it. The mod uses GPL-3.0-or-later. Original game files and saves are not distributed.
-
-[Download the installer ZIP](https://github.com/nPoTo/raziel-across-nosgoth/releases/download/R79/Raziel-R79-Installer.zip) · [Matching source](https://github.com/nPoTo/raziel-across-nosgoth/releases/download/R79/raziel-across-nosgoth-R79-source.zip) · [Build instructions](BUILD.md)
+- Added the new first Kain boss fight, using original Defiance AI decisions with SR1 movement and hits.
+- Kain has a health bar, fast combos, telekinesis, charged sword attacks and a charged beam.
+- The fight starts after the original opening scene. Kain is visible in the ending scene, and the story continues.
+- You can fight Kain with fists or any unlocked Reaver. He keeps his remaining HP when you return after death.
+- Balanced Kain's damage rules and gave Raziel the same internal HP capacity for this fight.
+- Fixed the full Spectral transition after death and improved recovery after aerial hits.
+- Fixed F9 restoring the saved powers, HP and mana, and the pre-fight status returning at the end.
+- Improved the coloured Reaver glow and charged coil along Raziel's arm. Reaver sounds are 20% quieter.

@@ -1,5 +1,16 @@
 # Changes by version
 
+## R79 → R116
+
+- Added the new first Kain boss fight, using original Defiance AI decisions with SR1 movement and hits.
+- Kain has a health bar, fast combos, telekinesis, charged sword attacks and a charged beam.
+- The fight starts after the original opening scene. Kain is visible in the ending scene, and the story continues.
+- You can fight Kain with fists or any unlocked Reaver. He keeps his remaining HP when you return after death.
+- Balanced Kain's damage rules and gave Raziel the same internal HP capacity for this fight.
+- Fixed the full Spectral transition after death and improved recovery after aerial hits.
+- Fixed F9 restoring the saved powers, HP and mana, and the pre-fight status returning at the end.
+- Improved the coloured Reaver glow and charged coil along Raziel's arm. Reaver sounds are 20% quieter.
+
 ## R79
 
 - Added built-in update checks, download progress and optional installation from GitHub.
